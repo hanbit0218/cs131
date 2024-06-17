@@ -1,0 +1,59 @@
+David Song
+Professor Ishigaki
+CS 131, Sec 61
+16 June 2024
+
+A1 Terminal Outputs
+
+SECTION A:
+Question 2: 
+/mnt/scratch/davidsu24
+
+Question 3:
+my UID:
+1269
+group(s):
+1270
+
+Question 4:
+meminfo
+cpuinfo
+
+Question 5:
+MemTotal: 73080640 kB
+
+Question 6:
+processors:
+256
+processor architecture name:
+POWER8 (architected)
+processor speed (GHz):
+3.425 GHz
+
+Question 7:
+	VERSION="8.6 (Ootpa)"
+
+
+SECTION B:
+Question 8:
+average: 18.6652
+
+Question 9:
+highest: 460.04
+
+Question 10:
+39909 236.0
+37140 237.0
+36990 161.0
+33678 230.0
+28506 170.0
+27895 162.0
+27485 48.0
+26782 142.0
+25051 239.0
+24609 234.0
+
+
+
+
+

@@ -1,0 +1,51 @@
+David Song
+Professor Ishigaki
+CS 131, Sec 61
+16 June 2024
+
+A1 Command Lines
+
+SECTION A:
+
+Question 1: 
+cd cs131
+mkdir a1
+cd a1
+
+Question 2: 
+	echo $HOME
+
+Question 3:
+	cd
+	id
+
+Question 4:
+	cd
+	ls /proc/ | grep mem
+	ls /proc/ | grep cpu
+
+Question 5:
+cd
+head /proc/meminfo
+
+Question 6:
+head /proc/cpuinfo
+tail /proc/cpuinfo
+cat /proc/cpuinfo
+
+Question 7:
+	cat /etc/os-release
+SECTION B:
+
+Question 8:
+cp /datasets/taxidata.tar.gz .
+tar -xvzf taxidata.tar.gz
+cd taxidata
+grep "2019-05-12" 2019-05.csv | awk -F',' '{ ++n; sum += $17 } END { print "average: " sum/n }'
+
+Question 9:
+awk -F, '$2 ~ /2019-05-12/ { if ($17 > highest) highest = $17 } END { print "highest: ", highest }' 2019-05.csv
+
+Question 10:
+	awk -F, '$4 >= 3{ print $9 }' 2019-05.csv | sort | uniq -c | sort -nr|head -10
+
