@@ -1,3 +1,38 @@
+MY CODE: 
+
+* checks if file exists
+```
+if [ ! -f "$1" ]; then
+  echo "Error: File does not exist"
+  exit 1
+fi
+```
+* gets and prints curent date/time and last modified date of file
+```
+CURRENT_DATE=$(date +%Y-%m-%d-%H-%M-%S
+LAST_MODIFIED_DATE=$(stat -c "%y" "$1")
+echo "Current Date and Time: $CURRENT_DATE"
+echo "Last Modified Date: $LAST_MODIFIED_DATE"
+```
+* asks user if they are sure they want to modify lmd
+```
+read -p "Do you want to change the last modified date? (y/n): " RESPONSE
+```
+* prompts user for new date, convert to the required format YYYY-MM-DD HH:MM:SS, and actually modifies the last edited date
+```
+if [ "$RESPONSE" = "y" ]; then
+  read -p "Enter the new last modified date (YYYYMMDD): " NEW_LAST_MODIFIED_DATE
+  NEW_LAST_MODIFIED_DATE=$(date -d "$NEW_LAST_MODIFIED_DATE" +%Y%m%d%H%M.%S)
+  touch -t "$NEW_LAST_MODIFIED_DATE" "$1"
+  echo "Last Modified Date changed successfully"
+```
+* lets user know that date has not been modified
+```
+else
+  echo "Last Modified Date not changed"
+fi
+```
+
 What this command does
 * This command takes a file as input and allows the user to change the "last modified" date of the file.
 
@@ -17,3 +52,6 @@ Enter the new last modified date (YYYYMMDD): 20110826
 Last Modified Date changed successfully
 [davidsu24@sjsu a2]$ stat -c "%y" a2test.txt
 2011-08-26 00:00:00.000000000 -0400
+
+Future Work: 
+* I could improve it so that it also changes the creation date of the file as well. 
