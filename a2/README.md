@@ -5,8 +5,8 @@ Why/When this command is useful
 * Lets say that you had to turn in a report to your boss by a quota, but you procrastinated and was not able to finish it on time. The boss wants you to provide proof that the last time you modified that file was before the due date. Simply pull out my tool and modify the date and submit it! :) 
 
 How you can use this command
-* ./date_change.sh <path to file>
-* stat -c "%y" <filename>
+* ./date_change.sh <path to file>	<-- run script
+* stat -c "%y" <filename>		<-- see stats of file post change
 
 Examples (Copy/Paste the actual terminal execution results)
 [davidsu24@sjsu a2]$ ./date_change.sh /mnt/scratch/davidsu24/cs131/a2/a2test.txt
